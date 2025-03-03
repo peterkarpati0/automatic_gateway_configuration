@@ -1,0 +1,38 @@
+# Why These Entries?
+
+# State files (.tfstate) → Store infrastructure details, including secrets.
+# Override files (.tfvars) → Often contain sensitive values like passwords or API keys.
+# Terraform working directory (.terraform/) → Caches provider binaries and is recreated by terraform init.
+# Lock files (.terraform.lock.hcl) → Manages dependency versions but is typically not ignored for consistent builds.
+# Plan files (.tfplan) → Binary files used for terraform apply.
+
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Ignore Terraform configuration override files
+*.tfvars
+*.tfvars.json
+!example.tfvars  # Allow example variable files for reference
+
+# Ignore Terraform CLI-related files
+.terraform/
+.terraform.lock.hcl
+
+# Ignore crash logs
+crash.log
+
+# Ignore environment variable files (if used)
+.env
+.envrc
+
+# Ignore any sensitive credentials stored in shell history
+.history
+.bash_history
+.zsh_history
+
+# Ignore Terraform execution plan files
+*.tfplan
+
+# Ignore logs and debugging files
+terraform.log
