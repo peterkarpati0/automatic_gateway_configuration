@@ -34,7 +34,7 @@ provider "routeros" {
 # However, if you want to set the identity name, update your Terraform script as follows:
 # Set system identity (name of the router)
 resource "routeros_system_identity" "router" {
-  name = "nemver-tf"  # Change this to the desired router name
+  name = "petinemvermacskat"  # Change this to the desired router name
 }
 
 output "router_identity" {
