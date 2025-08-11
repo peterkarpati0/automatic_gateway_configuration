@@ -1,5 +1,5 @@
 # attilahome config
-# https://whatismyipaddress.com/ --> 188.143.124.39
+# https://whatismyipaddress.com/ --> 46.139.14.94
 
 # recommended wireguard listen ports: 51820 - 51900
 # [1A]

@@ -7,7 +7,7 @@
 # public key: NKj***Rg=
 
 # [2B]
-# [101] TUNNEL = nemverhome - gptoffice
+# [101] TUNNEL = peterhome - attilahome
 /ip address add address=192.168.102.2/30 interface=wg-s2s-peterhome-attilahome network=192.168.102.0
 
 # [5]
