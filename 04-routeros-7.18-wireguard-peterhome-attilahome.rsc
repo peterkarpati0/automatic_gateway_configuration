@@ -13,7 +13,7 @@
 # [5]
 /interface wireguard peers 
 add allowed-address=192.168.102.0/30,172.22.22.0/24,172.22.23.0/24 \
-    endpoint-address=188.143.124.39 endpoint-port=51822 interface=\
+    endpoint-address=46.139.14.94 endpoint-port=51822 interface=\
     wg-s2s-peterhome-attilahome name=peer-s2s-peterhome-attilahome \
     public-key="Dxa***WE="
 
