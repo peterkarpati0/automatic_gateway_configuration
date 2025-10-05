@@ -36,3 +36,20 @@ crash.log
 
 # Ignore logs and debugging files
 terraform.log
+
+# Ignore backup files
+*.bkp
+*.backup
+*~
+*.tmp
+*.swp
+*.swo
+
+# Ignore Draw.io backup files
+*.drawio.bkp
+*.$*.drawio.bkp
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
