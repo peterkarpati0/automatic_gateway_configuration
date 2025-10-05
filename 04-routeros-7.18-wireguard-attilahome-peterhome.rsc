@@ -4,7 +4,7 @@
 # recommended wireguard listen ports: 51820 - 51900
 # [1A]
 /interface wireguard add listen-port=51822 mtu=1420 name=wg-s2s-attilahome-peterhome
-# public key: Dxa***WE=
+# public key: Be+***EQ=
 
 # [1B]
 # [102] TUNNEL = attilahome - peterhome
@@ -23,9 +23,9 @@
 # [3]
 /interface wireguard peers
 add allowed-address=192.168.102.0/30,172.22.22.0/24,172.22.23.0/24 \
-    endpoint-address=89.135.98.22 endpoint-port=51822 interface=\
+    endpoint-address=80.99.35.152 endpoint-port=51822 interface=\
     wg-s2s-attilahome-peterhome name=peer-s2s-attilahome-peterhome \
-    public-key="NKj***Rg="
+    public-key="ioR***3U="
 
 # https://registry.terraform.io/providers/terraform-routeros/routeros/latest/docs/resources/interface_wireguard_peer
 
@@ -52,8 +52,9 @@ add allowed-address=192.168.102.0/30,172.22.22.0/24,172.22.23.0/24 \
 #If the rule already exists and you want to move it to the second position, use:
 #/ip firewall filter move [find comment="allow wg-s2s-attilahome-peterhome"] 1
 
-# [7]
-/ip route add comment="route wg-s2s-attilahome-peterhome" disabled=no distance=1 dst-address=172.22.23.0/24 gateway=192.168.102.2 routing-table=main scope=30 suppress-hw-offload=no target-scope=10
+# [7] Routes for all allowed networks from Peter's side
+/ip route add comment="route wg-s2s-attilahome-peterhome-net23" disabled=no distance=1 dst-address=172.22.23.0/24 gateway=192.168.102.2 routing-table=main scope=30 suppress-hw-offload=no target-scope=10
+/ip route add comment="route wg-s2s-attilahome-peterhome-net17" disabled=no distance=1 dst-address=172.22.17.0/24 gateway=192.168.102.2 routing-table=main scope=30 suppress-hw-offload=no target-scope=10
 
 
 

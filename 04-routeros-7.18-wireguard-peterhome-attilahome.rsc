@@ -1,10 +1,10 @@
 # karpet config
-# https://whatismyipaddress.com/ -->  89.135.98.22
+# https://whatismyipaddress.com/ -->  89.135.XX.XX --> 80.99.35.152
 
 # recommended wireguard listen ports: 51820 - 51900
 # [2A]
 /interface wireguard add listen-port=51822 mtu=1420 name=wg-s2s-peterhome-attilahome
-# public key: NKj***Rg=
+# public key: ioR***3U=
 
 # [2B]
 # [101] TUNNEL = peterhome - attilahome
@@ -15,7 +15,7 @@
 add allowed-address=192.168.102.0/30,172.22.22.0/24,172.22.23.0/24 \
     endpoint-address=46.139.14.94 endpoint-port=51822 interface=\
     wg-s2s-peterhome-attilahome name=peer-s2s-peterhome-attilahome \
-    public-key="Dxa***WE="
+    public-key="Be+***EQ="
 
 # [6]
 /ip firewall filter add action=accept chain=input comment="allow accept wg-s2s-peterhome-attilahome" dst-port=51822 in-interface-list=WAN protocol=udp place-before=1
